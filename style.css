@@ -1,0 +1,104 @@
+h1 {
+    font-weight: 700;
+    font-size: 40px;
+    font-family: 'Rubik', sans-serif;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+}
+
+p {
+    font-weight: 400;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+}
+
+b {
+    font-weight: 700;
+}
+
+body {
+    background-color: #F7F7F7;
+}
+
+a {
+    color: #EF626C;
+    font-weight: 500;
+    /* text-decoration: none; */
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.name {
+    margin-top: 75px;
+    font-weight: 400;
+}
+
+.profilepic {
+    width:150px;
+    height:150px;
+    background-size:contain;
+    background-position:center;
+    border-radius:50%;
+    box-shadow: 0px 3px 6px 6px #00000010;
+    position: absolute;
+    top: -75px;
+}
+
+.homecard {
+    background-color: #FFFFFF;
+    padding: 32px;
+    border-radius: 16px;
+    width: 600px;
+    margin-top: 75px;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.circularbutton {
+    border: none;
+    background-color: #F6E8EA;
+    width: 73px;
+    height: 73px;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.circularbutton > img {
+    width: 40px;
+    height: 30px;
+    filter: brightness(0) saturate(100%) invert(66%) sepia(89%) saturate(3865%) hue-rotate(319deg) brightness(97%) contrast(93%);
+}
+
+.circularbutton:hover {
+    background-color: #EF626C;
+}
+
+.circularbutton:hover > img {
+    width: 40px;
+    height: 30px;
+    filter: brightness(0) saturate(100%) invert(88%) sepia(13%) saturate(266%) hue-rotate(307deg) brightness(107%) contrast(93%);
+}
