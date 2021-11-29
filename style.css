@@ -26,7 +26,7 @@ b {
     font-weight: 700;
 }
 
-body {
+html {
     background-color: #F7F7F7;
 }
 
@@ -34,6 +34,15 @@ a {
     color: #EF626C;
     font-weight: 500;
     /* text-decoration: none; */
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 nav {
@@ -101,4 +110,21 @@ nav {
     width: 40px;
     height: 30px;
     filter: brightness(0) saturate(100%) invert(88%) sepia(13%) saturate(266%) hue-rotate(307deg) brightness(107%) contrast(93%);
+}
+
+.headericon {
+    background-color: #F6E8EA;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-content: center;
+    border-radius: 50%;
+    margin-top: 32px;
+}
+
+.headericon > img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) saturate(100%) invert(66%) sepia(89%) saturate(3865%) hue-rotate(319deg) brightness(97%) contrast(93%);
+    padding: 25px;
 }
