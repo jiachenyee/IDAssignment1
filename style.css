@@ -80,6 +80,7 @@ nav {
     align-items: center;
     justify-content: center;
     align-content: center;
+    flex-direction: column;
 }
 
 .circularbutton {
@@ -127,4 +128,33 @@ nav {
     height: 40px;
     filter: brightness(0) saturate(100%) invert(66%) sepia(89%) saturate(3865%) hue-rotate(319deg) brightness(97%) contrast(93%);
     padding: 25px;
+}
+
+.contactcard {
+    background-color: #FFFFFF;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    border-radius: 16px;
+    width: 600px;
+    margin-bottom: 21px;
+}
+
+.contactcard > p > a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.contactcard > p > a:hover {
+    color: #868686;
+    text-decoration: none;
+}
+
+h2 > img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) saturate(100%) invert(66%) sepia(89%) saturate(3865%) hue-rotate(319deg) brightness(97%) contrast(93%);
+    margin-right: 8px;
 }
