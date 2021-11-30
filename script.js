@@ -28,14 +28,14 @@ let projects = [
         2018,
         "Tasks is a productivitiy app designed to help students focus by placing their phones faced down.",
         "assets/projects/tasks.png",
-        "https://apps.apple.com/sg/app/portablecl/id1389024983"
+        "https://apps.apple.com/us/app/tasks-productivity-elevated/id1440454388"
     ),
     new Project(
         "SST Announcer",
         2020,
         "SST Announcer is an app designed to help students stay up to date with information and announcements from the school.",
         "assets/projects/announcer.png",
-        "https://apps.apple.com/sg/app/portablecl/id1389024983"
+        "https://apps.apple.com/us/app/sst-announcer/id683929182"
     ),
     new Project(
         "TT Stickers",
@@ -124,4 +124,14 @@ function changeYear(year) {
             parent.appendChild(para);
         }
     }
+
+    let elementID = String(year ?? "all");
+
+    document.getElementById("all").className = "yearselectorbutton"
+    document.getElementById("2021").className = "yearselectorbutton"
+    document.getElementById("2020").className = "yearselectorbutton"
+    document.getElementById("2019").className = "yearselectorbutton"
+    document.getElementById("2018").className = "yearselectorbutton"
+
+    document.getElementById(elementID).className = "yearselectorbuttonselected";
 }
