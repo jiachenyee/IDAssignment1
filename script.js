@@ -112,23 +112,16 @@ function changeYear(year) {
     for (let i = 0; i < projects.length; i++) {
         let project = projects[i];
 
-        if (project.year === year || year == 0) {
+        if (project.year === year || year == null) {
             var para = document.createElement("DIV");
             
             para.innerHTML = `
-            <section class="projectscard">
-                <h2>${project.year} ${project.name}</h2>
+            <section class="projectscard" onclick="window.open('${project.link}');">
+                <h2><a style="color: #EF626C;">${project.year}</a> ${project.name}</h2>
                 <p>${project.description}</p>
             </section>
             `
             parent.appendChild(para);
         }
-    }
-    
-    switch (year) {
-        case 2021: console.log("hello 1"); break;
-        case 2020: console.log("hello 2"); break;
-        case 2019: console.log("hello 3"); break;
-        case 2018: console.log("hello 4"); break;
     }
 }

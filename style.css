@@ -190,6 +190,7 @@ h2 > img {
 .yearselector {
     display: flex;
     flex-direction: row;
+    margin-bottom: 21px;
 }
 
 .projectscollection {
@@ -198,12 +199,15 @@ h2 > img {
     flex-direction: row;
     align-items: center;
     align-content: center;
+    justify-content: center;
 }
 
 .projectscard {
     width: 400px;
     padding: 21px;
     background-color: #FFFFFF;
+    border-radius: 16px;
+    margin: 16px;
 }
 
 .projectscard > p {
@@ -211,4 +215,9 @@ h2 > img {
     white-space: normal;
     height: 3.6em;
     text-overflow: ellipsis;
+}
+
+.projectscard:hover {
+    box-shadow: 0px 3px 3px 10px #00000004;
+    background-color: #f6f6f6;
 }
