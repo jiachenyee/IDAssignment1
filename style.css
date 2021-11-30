@@ -158,3 +158,57 @@ h2 > img {
     filter: brightness(0) saturate(100%) invert(66%) sepia(89%) saturate(3865%) hue-rotate(319deg) brightness(97%) contrast(93%);
     margin-right: 8px;
 }
+
+.yearselectorbutton {
+    width: 120px;
+    height: 50px;
+    background-color: #EAEAEA;
+    color: #312F2F;
+    border: none;
+    border-radius: 50px;
+    display: inline-block;
+    margin-left: 8px;
+    margin-right: 8px;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.yearselectorbutton:hover {
+    background-color: #ef626b0F;
+    color: #EF626C;
+    border: none;
+    border-radius: 50px;
+    display: inline-block;
+    margin-left: 8px;
+    margin-right: 8px;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.yearselector {
+    display: flex;
+    flex-direction: row;
+}
+
+.projectscollection {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+.projectscard {
+    width: 400px;
+    padding: 21px;
+    background-color: #FFFFFF;
+}
+
+.projectscard > p {
+    overflow: hidden;
+    white-space: normal;
+    height: 3.6em;
+    text-overflow: ellipsis;
+}
