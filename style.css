@@ -16,12 +16,6 @@ h3 {
     font-family: 'Rubik', sans-serif;
 }
 
-h6 {
-    font-weight: 300;
-    font-size: 12px;
-    font-family: 'Rubik', sans-serif;
-}
-
 p {
     font-weight: 400;
     font-size: 20px;
@@ -134,12 +128,15 @@ nav {
     filter: brightness(0) saturate(100%) invert(88%) sepia(13%) saturate(266%) hue-rotate(307deg) brightness(107%) contrast(93%);
 }
 
-.circularbutton > h6 {
+.circularbutton > p {
     display: none;
     color: #F6E8EA;
+    font-weight: 300;
+    font-size: 12px;
+    font-family: 'Rubik', sans-serif;
 }
 
-.circularbutton:hover > h6 {
+.circularbutton:hover > p {
     display: inherit;
 }
 
