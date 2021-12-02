@@ -128,7 +128,7 @@ nav {
     filter: brightness(0) saturate(100%) invert(88%) sepia(13%) saturate(266%) hue-rotate(307deg) brightness(107%) contrast(93%);
 }
 
-.circularbutton > p {
+.circularbutton > span {
     display: none;
     color: #F6E8EA;
     font-weight: 300;
@@ -136,7 +136,7 @@ nav {
     font-family: 'Rubik', sans-serif;
 }
 
-.circularbutton:hover > p {
+.circularbutton:hover > span {
     display: inherit;
 }
 
