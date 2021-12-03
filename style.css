@@ -309,10 +309,54 @@ h2 > img {
     align-items: center;
     flex-wrap: nowrap;
 }
+
+.awardheader {
+    position: fixed; 
+    top: 8px;
+}
+
 .awardsection > img {
     max-width: 400px;
     max-height: 300px;
     border-radius: 16px;
+}
+
+@media only screen and (max-width: 700px) {
+    .awardgallary {
+        flex-direction: column;
+        gap: 16px;
+        padding-top: 0px;
+        align-content: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    .awardsection {
+        width: auto;
+        height: auto;
+        align-content: center;
+    }
+
+    .awardsection > img {
+        max-width: 100%;
+        border-radius: 16px;
+    }
+    .awardheader {
+        position: relative; 
+        top: 8px;
+        /* margin-bottom: -32px; */
+    }
+}
+
+@media only screen and (max-height: 900px) {
+    .awardheader {
+        position: relative; 
+    }
+
+    .awardgallary {
+        padding-top: 0px;
+    }
 }
 
 .timelinesection {
