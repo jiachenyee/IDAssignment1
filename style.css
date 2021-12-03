@@ -311,9 +311,34 @@ h2 > img {
 
     border-radius: 16px;
     width: 600px;
-    margin-bottom: 21px;
+}
+
+.timelineitem {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.timelineitem > div {
+    height: 21px;
+    width: 12px;
+    background-color: #EBEBEB;
 }
 
 .timelineyear {
     display: flex;
+    flex-direction: row;
+}
+
+.timelineyear > h2 {
+    color: #0000001E;
+    width: 100px;
+    margin-top: 0px;
+}
+
+.timelineyearcontents {
+    display: flex;
+    flex-direction: column;
 }

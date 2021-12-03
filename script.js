@@ -31,11 +31,9 @@ let timelineObject = [
             "Ngee Ann Polytechnic",
             "I am currently pursuing a diploma in Information Technology at Ngee Ann Polytechnic",
             "https://np.edu.sg"
-        )
-    ],
-    [
+        ),
         new TimelineObject(
-            2019,
+            2021,
             TimelineCategory.WORK,
             "Swift Accelerator Programme Trainer",
             "After volunteering in 2019 and 2020, I decided to formally become the assistant trainer of the programme. As the assistant trainer, I redeveloped the curriculum, switching from UIKit to SwiftUI.",
@@ -306,23 +304,35 @@ function loadTimeline() {
     for (let i = 0; i < timelineObject.length; i++) {
         let year = timelineObject[i];
 
+        let timelineYear = document.createElement("SECTION");
+        timelineYear.className = "timelineyear"
+        
+        timelineYear.innerHTML = `
+        <h2>${year[0].year}</h2>
+        <h2 style="opacity: 0;">${year[0].year}</h2>
+        `
+        
         var yearSection = document.createElement("SECTION");
-        yearSection.className = "timelineyear";
+        yearSection.className = "timelineyearcontents";
 
-        for (let eventIndex = 0; eventIndex < year.length; i++) {
+        for (let eventIndex = 0; eventIndex < year.length; eventIndex++) {
             let event = year[eventIndex]
 
             var para = document.createElement("DIV");
-
+            para.className = "timelineitem"
             para.innerHTML = `
             <section class="timelinesection" onclick="window.open('${event.link}');">
-                <h2>${event.name}</h2>
+                <h2><img src="assets/icons/${event.category}.svg" alt="${event.category} icon"/> ${event.name}</h2>
                 <p>${event.description}</p>
             </section>
+            <div/>
             `
             yearSection.appendChild(para);
         }
 
-        parent.appendChild(yearSection);
+        
+        timelineYear.insertBefore(yearSection, timelineYear.childNodes[2]);
+
+        parent.appendChild(timelineYear)
     }
 }
