@@ -180,6 +180,12 @@ nav {
     margin-bottom: 21px;
 }
 
+@media only screen and (max-width: 700px) {
+    .contactcard {
+        width: 80%;
+    }
+}
+
 .contactcard > p > a {
     color: #000000;
     text-decoration: none;
@@ -244,6 +250,13 @@ h2 > img {
     display: flex;
     flex-direction: row;
     margin-bottom: 21px;
+}
+
+@media only screen and (max-width: 600px) {
+    .yearselector {
+        flex-direction: column;
+        gap: 16px;
+    }
 }
 
 .projectscollection {
