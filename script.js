@@ -102,6 +102,58 @@ let projects = [
     )
 ]
 
+let awards = [
+    new Project(
+        "WWDC21 Swift Student Challenge", 
+        2021, 
+        "In 2021, I won Apple's WWDC21 Swift Student Challenge and built a 3D Playground that used Apple's SceneKit along with CoreML to create a simple way to learn SwiftUI.",
+        "assets/awards/wwdc21.png", 
+        "https://github.com/jiachenyee/wwdc21explorer",
+    ),
+    new Project(
+        "WWDC20 Swift Student Challenge", 
+        2020, 
+        "In 2020, I won Apple's WWDC20 Swift Student Challenge with a Playground based on Singapore's heritage and the last surviving kampong using SceneKit and machine learning.",
+        "assets/awards/wwdc20.png", 
+        "https://www.hardwarezone.com.sg/tech-news-16-year-old-jia-chen-singapore-wwdc20-swift-student-challenge-winner",
+    ),
+    new Project(
+        "App Development with Swift Level 1 Certification", 
+        2020, 
+        "In 2020, I got Certiport's App Development with Swift Level 1 certification. The certification tested knowledge in UIKit, Xcode, Storyboards and more.",
+        "assets/awards/appdevcertification.png", 
+        "https://www.credly.com/badges/84bc4333-5e41-4da2-8b18-25fcf67f4532/linked_in_profile",
+    ),
+    new Project(
+        "11 Dec Tim Cook Presentation", 
+        2019, 
+        "I presented 2 of my apps, PortableCL and Tasks to Apple's CEO Tim Cook when he was in Singapore back in 2019. During the ",
+        "assets/awards/timcook.png", 
+        "https://youtu.be/3_Rm46-EI9c",
+    ),
+    new Project(
+        "Empactathon Salesforce / Design for Change Presentation", 
+        2019, 
+        "At Empactathon, I had the opportunity to pitch my app to Salesforce's Senior Vice-President & General Manager (Asia), Renzo Taal and Executive Vice-President & General Manager (APAC), Ulrik. Nehammer.",
+        "assets/awards/salesforce.png", 
+        "https://www.credly.com/badges/84bc4333-5e41-4da2-8b18-25fcf67f4532/linked_in_profile",
+    ),
+    new Project(
+        "SST Inventive Minds Award", 
+        2019, 
+        "In 2019, my app, PortableCL won SST's Inventive Minds Award. The award's goal is to recognise student's work in creativity and innovation.",
+        "assets/awards/sst.png", 
+        "http://sst.edu.sg/",
+    ),
+    new Project(
+        "App of the Year", 
+        2018, 
+        "In 2018, my app, PortableCL won SST Inc.'s App of the Year award. PortableCL was chosen from nearly 20 other apps created by other students within SST Inc.",
+        "assets/awards/sstinc.png", 
+        "http://sst.edu.sg/",
+    )
+]
+
 function changeYear(year) {
     let parent = document.getElementById("projectsDiv")
     
@@ -117,7 +169,7 @@ function changeYear(year) {
             
             para.innerHTML = `
             <section class="projectscard" onclick="window.open('${project.link}');">
-                <h2><a style="color: #EF626C;">${project.year}</a> ${project.name}</h2>
+                <h2><span style="color: #EF626C;">${project.year}</span> ${project.name}</h2>
                 <p>${project.description}</p>
             </section>
             `
@@ -134,4 +186,25 @@ function changeYear(year) {
     document.getElementById("2018").className = "yearselectorbutton"
 
     document.getElementById(elementID).className = "yearselectorbuttonselected";
+}
+
+function showAwards() {
+    let parent = document.getElementById("awardscards")
+
+    console.log("hi");
+    console.log(parent);
+    for (let i = 0; i < awards.length; i++) {
+        let award = awards[i];
+
+        var para = document.createElement("DIV");
+        
+        para.innerHTML = `
+        <section class="awardsection" onclick="window.open('${award.link}');">
+            <img src="${award.image}" alt="${award.name}"/>
+            <h2><span style="color: #EF626C;">${award.year}</span> ${award.name}</h2>
+            <p>${award.description}</p>
+        </section>
+        `
+        parent.appendChild(para);
+    }
 }

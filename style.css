@@ -123,8 +123,7 @@ nav {
 .circularbutton:hover > img {
     width: 40px;
     height: 30px;
-    margin-bottom: -25px;
-    margin-top: 25px;
+    margin-bottom: 8px;
     filter: brightness(0) saturate(100%) invert(88%) sepia(13%) saturate(266%) hue-rotate(307deg) brightness(107%) contrast(93%);
 }
 
@@ -142,6 +141,17 @@ nav {
 
 .headericon {
     background-color: #F6E8EA;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap-reverse;
+    border-radius: 50%;
+    margin-top: 32px;
+}
+
+.headericon:hover {
+    background-color: #fffafb;
     width: 90px;
     height: 90px;
     display: flex;
@@ -263,4 +273,31 @@ h2 > img {
 .projectscard:hover {
     box-shadow: 0px 3px 3px 10px #00000004;
     background-color: #f6f6f6;
+}
+
+.awardsection {
+    width: 400px;
+    height: 600px;
+    padding: 21px;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    margin: 16px;
+}
+
+.awardsection:hover {
+    box-shadow: 0px 3px 3px 10px #00000004;
+    background-color: #f6f6f6;
+}
+
+.awardgallary {
+    width: 100vw;
+    padding-top: 200px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.awardsection > img {
+    max-width: 400px;
+    max-height: 300px;
+    border-radius: 16px;
 }
