@@ -48,6 +48,7 @@ header {
 nav {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 16px;
 }
 
@@ -78,12 +79,16 @@ nav {
 
 @media only screen and (max-width: 700px) {
     .homecard {
-        width: auto;
-        padding-left: 21px;
-        padding-right: 21px;
+        width: 100%;
+        margin-left: 21px;
+        margin-right: 21px;
+        margin-top: 96px;
+        /* margin-top: 21px; */
     }
     .profilepic {
         position: absolute;
+        /* margin-left: 21px; */
+        /* margin-top: 21px; */
     }
 }
 
@@ -423,6 +428,9 @@ h2 > img {
 .timelineyear {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
 }
 
 .timelineyear > h2 {
@@ -434,4 +442,26 @@ h2 > img {
 .timelineyearcontents {
     display: flex;
     flex-direction: column;
+}
+
+@media only screen and (max-width: 900px) {
+    .timelineyear {
+        flex-direction: column;
+    }
+
+    .timelineitem {
+        margin-bottom: 16px;
+    }
+
+    .timelineitem > div {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .timelinesection {
+        width: 80%;
+        margin-left: 21px;
+        margin-right: 21px;
+    }
 }
