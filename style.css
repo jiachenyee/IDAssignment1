@@ -1,3 +1,4 @@
+/* MARK: - Global elements */
 h1 {
     font-weight: 700;
     font-size: 40px;
@@ -8,6 +9,14 @@ h2 {
     font-weight: 700;
     font-size: 30px;
     font-family: 'Rubik', sans-serif;
+}
+
+/* Create inline icon style */
+h2 > img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) saturate(100%) invert(66%) sepia(89%) saturate(3865%) hue-rotate(319deg) brightness(97%) contrast(93%);
+    margin-right: 8px;
 }
 
 h3 {
@@ -44,6 +53,8 @@ header {
     align-content: center;
     flex-direction: column;
 }
+
+/* MARK: Styling for index.html */
 
 nav {
     display: flex;
@@ -83,15 +94,13 @@ nav {
         margin-left: 21px;
         margin-right: 21px;
         margin-top: 96px;
-        /* margin-top: 21px; */
     }
     .profilepic {
         position: absolute;
-        /* margin-left: 21px; */
-        /* margin-top: 21px; */
     }
 }
 
+/* Set up circular navigation buttons */
 .circularbutton {
     border: none;
     background-color: #F6E8EA;
@@ -136,6 +145,7 @@ nav {
     display: inherit;
 }
 
+/* Set up hheader icons for subsequent CSS files */
 .headericon {
     background-color: #F6E8EA;
     width: 90px;
@@ -165,6 +175,8 @@ nav {
     padding: 25px;
 }
 
+/* MARK: - Contact screen */
+
 .contactcard {
     background-color: #FFFFFF;
     padding-top: 16px;
@@ -185,6 +197,16 @@ nav {
     flex-direction: column;
 }
 
+.contactcard > p > a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.contactcard > p > a:hover {
+    color: #868686;
+    text-decoration: none;
+}
+
 @media only screen and (max-width: 700px) {
     .contactcard {
         margin-left: 10%;
@@ -202,23 +224,8 @@ nav {
     }
 }
 
-.contactcard > p > a {
-    color: #000000;
-    text-decoration: none;
-}
-
-.contactcard > p > a:hover {
-    color: #868686;
-    text-decoration: none;
-}
-
-h2 > img {
-    width: 30px;
-    height: 30px;
-    filter: brightness(0) saturate(100%) invert(66%) sepia(89%) saturate(3865%) hue-rotate(319deg) brightness(97%) contrast(93%);
-    margin-right: 8px;
-}
-
+/* MARK: - Project Screen */
+/* Create year selector */
 .yearselectorbutton {
     width: 120px;
     height: 50px;
@@ -268,6 +275,7 @@ h2 > img {
     margin-bottom: 21px;
 }
 
+/* Create project collection */
 .projectscollection {
     display: flex;
     flex-wrap: wrap;
@@ -326,6 +334,7 @@ h2 > img {
     }
 }
 
+/* MARK: - Awards Section */
 .awardsection {
     width: 400px;
     height: 600px;
@@ -400,6 +409,7 @@ h2 > img {
     }
 }
 
+/* MARK: - Timeline Section */
 .timelinesection {
     background-color: #FFFFFF;
     padding-top: 16px;
