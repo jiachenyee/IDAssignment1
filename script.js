@@ -257,7 +257,7 @@ function changeYear(year) {
 
         if (project.year === year || year == null) {
             var para = document.createElement("DIV");
-            
+            para.className = "projectcardcontainer";
             para.innerHTML = `
             <section class="projectscard" onclick="window.open('${project.link}');">
                 <h2><span style="color: #EF626C;">${project.year}</span> ${project.name}</h2>

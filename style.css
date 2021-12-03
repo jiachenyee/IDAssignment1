@@ -252,13 +252,6 @@ h2 > img {
     margin-bottom: 21px;
 }
 
-@media only screen and (max-width: 600px) {
-    .yearselector {
-        flex-direction: column;
-        gap: 16px;
-    }
-}
-
 .projectscollection {
     display: flex;
     flex-wrap: wrap;
@@ -276,6 +269,12 @@ h2 > img {
     margin: 16px;
 }
 
+.projectcardcontainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
 .projectscard > p {
     overflow: hidden;
     white-space: normal;
@@ -286,6 +285,29 @@ h2 > img {
 .projectscard:hover {
     box-shadow: 0px 3px 3px 10px #00000004;
     background-color: #f6f6f6;
+}
+
+@media only screen and (max-width: 700px) {
+    .yearselector {
+        flex-direction: column;
+        gap: 16px;
+        display: none;
+    }
+
+    .projectscard {
+        width: 100%;
+        padding-left: 21px;
+        padding-right: 21px;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .projectscollection {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
 }
 
 .awardsection {
@@ -345,7 +367,6 @@ h2 > img {
     .awardheader {
         position: relative; 
         top: 8px;
-        /* margin-bottom: -32px; */
     }
 }
 
