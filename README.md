@@ -20,8 +20,6 @@ Another key emphasis on the site was ensuring consistency. Consistency is key to
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
- 
 ### Existing Features
 1. Filter projects by year
 > I felt that this feature was important as, from the perspective of a recruiter, they may be more interested in projects from certain years and having the option to quickly filter the data makes their lives easier. Furthermore, I grouped the projects on the **All** tab based on their relevance, such as more emphasis on flagship projects and those on the Apple App Store.
@@ -43,8 +41,6 @@ In this section, you should go over the different parts of your project, and des
 - More images: With more time, I could have probably added more images to better illustrate some of the projects and achievements. Having graphics and images can help to draw the user's attention to specific information and I feel that adding additional ones will help making the site look more complete.
 
 ## Technologies Used
-
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
 - HTML/CSS
     - I used HTML and CSS to layout and style the entire interface
