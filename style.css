@@ -87,14 +87,6 @@ nav {
     }
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-}
-
 .circularbutton {
     border: none;
     background-color: #F6E8EA;
@@ -180,9 +172,28 @@ nav {
     margin-bottom: 21px;
 }
 
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
 @media only screen and (max-width: 700px) {
     .contactcard {
+        margin-left: 10%;
+        margin-right: 10%;
         width: 80%;
+    }
+
+    .contactcard > p {
+        word-wrap: break-word;
+    }
+
+    .container {
+        padding-right: 21px;
+        padding-left: 21px;
     }
 }
 
@@ -357,11 +368,15 @@ h2 > img {
     .awardsection {
         width: auto;
         height: auto;
+        display: flex;
         align-content: center;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .awardsection > img {
         max-width: 100%;
+        max-height: none;
         border-radius: 16px;
     }
     .awardheader {
