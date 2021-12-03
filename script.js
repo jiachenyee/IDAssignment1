@@ -8,6 +8,99 @@ class Project {
     }
 }
 
+const TimelineCategory= {
+    EDUCATION: 'education',
+    WORK: 'work',
+    EVENT: 'event'
+}
+class TimelineObject {
+    constructor(year, category, name, description, link) {
+        this.name = name;
+        this.year = year;
+        this.description = description;
+        this.category = category;
+        this.link = link;
+    }
+}
+
+let timelineObject = [
+    [
+        new TimelineObject(
+            2021,
+            TimelineCategory.EDUCATION,
+            "Ngee Ann Polytechnic",
+            "I am currently pursuing a diploma in Information Technology at Ngee Ann Polytechnic",
+            "https://np.edu.sg"
+        )
+    ],
+    [
+        new TimelineObject(
+            2019,
+            TimelineCategory.WORK,
+            "Swift Accelerator Programme Trainer",
+            "After volunteering in 2019 and 2020, I decided to formally become the assistant trainer of the programme. As the assistant trainer, I redeveloped the curriculum, switching from UIKit to SwiftUI.",
+            "https://swiftinsg.org"
+        )
+    ],
+    [
+        new TimelineObject(
+            2020,
+            TimelineCategory.WORK,
+            "Tinkertanker Pte Ltd.",
+            "I started working at Tinkertanker over a year ago where I develop iOS development (with UIKit and SwiftUI) curriculum and play around with new technologies.",
+            "https://tinkertanker.com"
+        )
+    ],
+    [
+        new TimelineObject(
+            2019,
+            TimelineCategory.EVENT,
+            "SST Inc. iOS Development Course",
+            "I ran a 9-month long App Development with Swift course for the Secondary 1 Batch. The course covered a range of topics from fundamentals, such as conditionals and datatypes to databases.",
+            "https://swiftinsg.org"
+        ),
+        new TimelineObject(
+            2019,
+            TimelineCategory.EVENT,
+            "Swift Accelerator Programme Volunteering",
+            "After volunteering in 2019, I decided to do it again in 2020. In 2020, there were many new challenges we never encountered before having to conduct a fully online class on Webex.",
+            "https://swiftinsg.org"
+        ),
+        new TimelineObject(
+            2019,
+            TimelineCategory.EVENT,
+            "Swift Accelerator Programme Volunteering",
+            "Having graduated from the programme in 2018, I decided to volunteer as a helper in 2019 where I aided the formal trainers in debugging student's work and assisted with UI/UX design and ideation.",
+            "https://swiftinsg.org"
+        ),
+        new TimelineObject(
+            2019,
+            TimelineCategory.EVENT,
+            "GeeksHacking Hackomania",
+            "I volunteered at Hackomania 2019, a 24-hour hackathon by Geekshacking Community that aimed to bring together the tech community in Singapore to tackle real-world issues with tech solutions.",
+            "https://swiftinsg.org"
+        )
+    ],
+    [
+        new TimelineObject(
+            2018,
+            TimelineCategory.EVENT,
+            "Swift Accelerator Programme",
+            "I was selected as one of the 50 students in the Swift Accelerator Programme pilot. The programme, by Apple and IMDA, helped to develop my interest in programming and got me into the field of iOS development.",
+            "https://swiftinsg.org"
+        )
+    ],
+    [
+        new TimelineObject(
+            2017,
+            TimelineCategory.EDUCATION,
+            "School of Science and Technology, Singapore",
+            "I got into SST successfully via DSA and spent 4 years in the school. During which, I joined SST Inc., a infocomm talent development programme and went for the Computing+ Applied Subject.",
+            "https://sst.edu.sg"
+        )
+    ]
+]
+
 let projects = [
     new Project(
         "Friction", 
@@ -191,8 +284,6 @@ function changeYear(year) {
 function showAwards() {
     let parent = document.getElementById("awardscards")
 
-    console.log("hi");
-    console.log(parent);
     for (let i = 0; i < awards.length; i++) {
         let award = awards[i];
 
@@ -206,5 +297,32 @@ function showAwards() {
         </section>
         `
         parent.appendChild(para);
+    }
+}
+
+function loadTimeline() {
+    let parent = document.getElementById("timeline")
+
+    for (let i = 0; i < timelineObject.length; i++) {
+        let year = timelineObject[i];
+
+        var yearSection = document.createElement("SECTION");
+        yearSection.className = "timelineyear";
+
+        for (let eventIndex = 0; eventIndex < year.length; i++) {
+            let event = year[eventIndex]
+
+            var para = document.createElement("DIV");
+
+            para.innerHTML = `
+            <section class="timelinesection" onclick="window.open('${event.link}');">
+                <h2>${event.name}</h2>
+                <p>${event.description}</p>
+            </section>
+            `
+            yearSection.appendChild(para);
+        }
+
+        parent.appendChild(yearSection);
     }
 }

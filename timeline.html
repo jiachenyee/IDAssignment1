@@ -9,13 +9,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
-    <body class="container">
+    <body class="container" onload="loadTimeline()">
         <header>
             <div class="headericon" onclick="javascript:history.back()">
                 <img src="assets/icons/timeline.svg" alt="Timeline Icon"/>
             </div>
             
             <h1>Timeline</h1>
+
+            <div id="timeline">
+
+            </div>
             
             <script src="script.js"></script>
         </header>

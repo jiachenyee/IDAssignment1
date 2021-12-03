@@ -301,3 +301,19 @@ h2 > img {
     max-height: 300px;
     border-radius: 16px;
 }
+
+.timelinesection {
+    background-color: #FFFFFF;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    border-radius: 16px;
+    width: 600px;
+    margin-bottom: 21px;
+}
+
+.timelineyear {
+    display: flex;
+}
